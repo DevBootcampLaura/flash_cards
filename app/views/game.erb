@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>Welcome to your new game of flashcards!</h2>
+  <h3>This is the game <%= @round.name%></h3>
+  <form action="/start" method="post">
+    <input type="submit" value="Start The Game">
+    <input type='hidden' name="name", value="<%=@deck.name%>">
+  </form>
+</div>

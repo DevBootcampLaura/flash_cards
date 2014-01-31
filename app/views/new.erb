@@ -1,0 +1,9 @@
+<!-- this will display all of our decks as links -->
+<div class= "container">
+  <h1>Select A Deck</h1>
+  <form action="/start" method="post">
+  <%Deck.all.each do |deck|%>
+    <input type="submit" name="name" value="<%="#{deck.name}"%>"><br>
+  <%end%>
+  </form>
+</div>
