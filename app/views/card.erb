@@ -4,14 +4,12 @@
     <input type="text" name="guess">
     <input type="submit" value="Make A Guess!">
     <input type="hidden" name="id" value="<%= @card.id %>">
-    <input type="hidden" name="name" value="<%= @deck.name %>">
   </form>
 
   <p><%=@guess%></p>
   <form action="/next" method= "post">
     <input type="submit" value="Next">
     <input type="hidden" name="id" value="<%= @card.id %>">
-    <!-- <input type="hidden" name="name" value="<%= @deck.name %>"> -->
   </form>
   <form action="/exit" method= "post">
     <input type="submit" value="End Game">

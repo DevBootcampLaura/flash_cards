@@ -13,8 +13,24 @@ get '/game/:deck_name' do
 end
 
 post '/start' do
-  redirect "game/#{params[:name]}/51"
+  deck = Deck.find_by_name(params[:name]).cards
+  cards = []
+  deck.all.each do |card|
+    cards << card.id
+  end
+
+  @c = cards.sample
+  redirect "card/#{@c}"
 end
+
+get '/card/:card_id' do
+  # @deck = Deck.find_by_name(params[:deck_name])
+  # @card = @deck.cards.find_by_id(params[:card_id].to_i)
+  @card = Card.find(params[:card_id].to_i)
+  erb :card
+end
+
+
 
 post '/card' do
   @card = Card.find(params[:id].to_i)
@@ -33,8 +49,8 @@ end
 
 
 
-get '/game/:deck_name/:card_id' do
-  @deck = Deck.find_by_name(params[:deck_name])
-  @card = @deck.cards.find_by_id(params[:card_id].to_i)
-  erb :card
-end
+# get '/game/:deck_name/:card_id' do
+#   @deck = Deck.find_by_name(params[:deck_name])
+#   @card = @deck.cards.find_by_id(params[:card_id].to_i)
+#   erb :card
+# end
