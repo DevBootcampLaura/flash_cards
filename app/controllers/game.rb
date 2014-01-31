@@ -12,29 +12,25 @@ get '/game/:deck_name' do
   erb :game
 end
 
+#When we choose the deck
 post '/start' do
   deck = Deck.find_by_name(params[:name]).cards
-  cards = []
+  session[:cards] = []
   deck.all.each do |card|
-    cards << card.id
+    session[:cards] << card.id
   end
 
-  @c = cards.sample
+  @c = session[:cards].shuffle!.pop
   redirect "card/#{@c}"
 end
 
 get '/card/:card_id' do
-  # @deck = Deck.find_by_name(params[:deck_name])
-  # @card = @deck.cards.find_by_id(params[:card_id].to_i)
   @card = Card.find(params[:card_id].to_i)
   erb :card
 end
 
-
-
 post '/card' do
   @card = Card.find(params[:id].to_i)
-  @deck = Deck.find_by_name(params[:name])
   if params[:guess] == @card.answer
     @guess = "Correct!"
   else
@@ -44,13 +40,14 @@ post '/card' do
 end
 
 post '/next' do
-  redirect "game/#{params[:name]}/#{params[:id]+1}"
+  while session[:cards] != []
+    puts session[:cards].size
+    @c = session[:cards].pop
+    redirect "card/#{@c}"
+  end
+  erb :end
 end
 
 
 
-# get '/game/:deck_name/:card_id' do
-#   @deck = Deck.find_by_name(params[:deck_name])
-#   @card = @deck.cards.find_by_id(params[:card_id].to_i)
-#   erb :card
-# end
+
