@@ -1,3 +1,12 @@
 <div class="container">
+  <h1>Welcome to Squirrel Cards <%= User.find(session[:id]).name %></h1>
   <a href="/new">New Game</a>
+<h3>Recent Games</h3>
+  <ul>
+    <% rounds = User.find(session[:id]).rounds %>
+    <% rounds.each do |round| %>
+    <li><a href='/round/<%= round.name %>'><%= round.name %></a></li>
+    <% end %>
+  </ul>
+
 </div>

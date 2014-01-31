@@ -4,4 +4,14 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+
+  // Hide signup form on load
+  $(".signup").css("display","none");
+  // Show signup form on click
+	$("#show_signup").click(function(event){
+	    event.preventDefault(); //to prevent standard click event
+	    $(".signup").toggle();
+	});
+
+
 });

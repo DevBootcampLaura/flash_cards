@@ -3,3 +3,7 @@ post '/login' do
   session[:id] = user.id
   erb :landing
 end
+
+post '/create' do
+
+end

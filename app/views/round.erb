@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Results for Round: <%=@round.name %></h2>
+    <%= complete(@round.complete, @round.deck_id) %>
+    <br>
+    <dl>
+
+      <% guesses = Guess.where(round_id: @round.id).to_a %>
+
+      <% guesses.each do |guess| %>
+      <dt><%= Card.find(guess.card_id).question %></dt>
+      <dd><%= answer = guess.guess %>, <%= correct(Card.find(guess.card_id), answer) %></dd>
+      <% end %>
+    </dl>
+</div>
