@@ -1,8 +1,19 @@
 <div class="container">
   <h1>Squirrel Cards</h1>
-  <h3>Please enter a username</h3>
+  <h3>Please Enter Your Username and Password</h3>
   <form action="/login" method="post">
-    <input type="text" name="username">
-    <input type="submit" value="Login">
+    Username: <input type="text" name="username">
+    <br><br>
+    Password:&nbsp <input type="text" name="password">
+    &nbsp&nbsp&nbsp<input type="submit" value="Login">
+  </form>
+  <h3>or Create a New Account</h3>
+  <a href="#">Create new user</a>
+  <br><br>
+    <form action="/create" method="post">
+    Username: <input type="text" name="username">
+    <br><br>
+    Password:&nbsp <input type="text" name="password">
+    &nbsp&nbsp&nbsp<input type="submit" value="Login">
   </form>
 </div>
