@@ -3,6 +3,7 @@ class CreateRounds < ActiveRecord::Migration
     create_table :rounds do |t|
       t.belongs_to :user
       t.belongs_to :deck
+      t.text :record
       t.timestamps
     end
   end
