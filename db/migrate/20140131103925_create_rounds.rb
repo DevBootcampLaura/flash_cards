@@ -4,6 +4,7 @@ class CreateRounds < ActiveRecord::Migration
       t.belongs_to :user
       t.belongs_to :deck
       t.text :record
+      t.string :name
       t.timestamps
     end
   end
