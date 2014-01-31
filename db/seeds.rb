@@ -2,20 +2,14 @@ require 'csv'
 
 module Parser
 
-  def self.parse(file, id)
-    CSV.table(file, :header_converters => :symbol).each do |row|
-      # p row #= row.to_hash
-      # p row[:question], row[:answer], id
-      # p row.to_hash Just in case the previous line doesn't work
-      Card.create(:question => row[:qustion], :answer => row[:answer], :deck_id => id)
+  def self.parse(file, name)
+    deck = Deck.create(:name => name)
+    CSV.foreach(File.open(filename=File.dirname(__FILE__) + "/../db/#{file}"), :headers => true, :header_converters => :symbol) do |row|
+      deck.cards << Card.create(:question => row[:question], :answer => row[:answer])
     end
   end
 end
 
-first_deck = Deck.create(:name => "State Capitals")
-id = first_deck.id
-Parser.parse('state_capitals.csv', id)
+Parser.parse('state_capitals.csv', "State Capitals")
 
-second_deck = Deck.create(:name => "State Nicknames")
-id = second_deck.id
-Parser.parse('state_nicknames.csv', id)
+Parser.parse('state_nicknames.csv', "State Nicknames")
