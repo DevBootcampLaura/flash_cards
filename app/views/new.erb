@@ -1,0 +1,7 @@
+<!-- this will display all of our decks as links -->
+<div class= "container">
+  <h1>Select A Deck</h1>
+  <%Deck.all.each do |deck|%>
+    <a href="/game/<%=deck.name%>"> <%=deck.name%> </a><br>
+  <%end%>
+</div>
