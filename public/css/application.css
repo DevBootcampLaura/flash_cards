@@ -13,3 +13,6 @@ th {
   padding: 0px 20px 20px 20px;
   text-align: center;
 }
+.footer a{
+  text-decoration: none;
+}
