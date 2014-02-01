@@ -2,14 +2,15 @@
   <h2><%="#{@card.question}"%></h2>
   <form action="/card" method="post">
     <input type="text" name="guess">
+    <input type="hidden" name="id" value="<%= @card.id %>">
+  <!-- </form> -->
+  <p><%= @guess %></p>
+  <!-- <form action="/next" method= "post"> -->
     <input type="submit" value="Make A Guess!">
-    <input type="hidden" name="id" value="<%= @card.id %>">
-  </form>
 
-  <p><%=@guess%></p>
-  <form action="/next" method= "post">
-    <input type="submit" value="Next">
-    <input type="hidden" name="id" value="<%= @card.id %>">
+
+
+<!--     <input type="hidden" name="id" value="<%= @card.id %>"> -->
   </form>
   <form action="/exit" method= "post">
     <input type="submit" value="End Game">
