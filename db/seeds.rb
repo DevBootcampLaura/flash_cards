@@ -13,3 +13,9 @@ end
 Parser.parse('state_capitals.csv', "State Capitals")
 
 Parser.parse('state_nicknames.csv', "State Nicknames")
+
+
+(1..20).each {|num| Guess.create(card_id: num, guess: "Springfield", round_id: 1)}
+
+User.create(name: "Danny")
+Round.create(name: 'Game', user_id: 1, deck_id: 1)

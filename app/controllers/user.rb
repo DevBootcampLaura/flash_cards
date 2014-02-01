@@ -1,5 +1,9 @@
 post '/login' do
   user = User.find_or_create_by(name: params['username'])
-  @user = user.id
+  session[:id] = user.id
   erb :landing
+end
+
+post '/create' do
+
 end
