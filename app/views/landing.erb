@@ -1,14 +1,10 @@
-<div class="container">
-
-  <h1>Welcome to Squirrel Cards <%= User.find(session[:id]).name %></h1>
-
-  <a href="/new">New Game</a>
-<h3>Recent Games</h3>
-  <ul>
-    <% rounds = User.find(session[:id]).rounds %>
-    <% rounds.each do |round| %>
-    <li><a href='/round/<%= round.name %>'><%= round.name %></a></li>
-    <% end %>
-  </ul>
-
-</div>
+<h1>Welcome to the Jungle, <%= User.find(session[:id]).name.capitalize %></h1>
+<a href='/newgame'>New Deck, New Game</a>
+<h3 id='fun_n_games'>We've got Fun 'n' Games</h3>
+<p id='previous'>(Previous Games)</p>
+<ul>
+  <% rounds = Round.where(user_id: session[:id]).reverse %>
+  <% rounds.each do |round| %>
+  <li><a href='/result/<%= round.name %>'><%= round.name %></a></li>
+  <% end %>
+</ul>

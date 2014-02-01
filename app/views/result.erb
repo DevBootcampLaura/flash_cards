@@ -1,0 +1,13 @@
+<% correct = 0; incorrect = 0 %>
+<h1>Here are Your Result For Game...</h1>
+<h2><%= @name %></h2>
+<table border='1'>
+  <tr><td>Question</td><td>Guess</td><td>Answer</td><td>Correct</td></tr>
+  <tr><td></td></tr>
+  <% guesses = Guess.where(round_id: @id) %>
+  <% guesses.each do |guess| %>
+  <tr><td><%= Card.where(id: guess.card_id).first.question %></td><td><%= g = guess.guess.upcase %></td><td><%= a = Card.where(id: guess.card_id).first.answer %></td><td><%= correct?(g,a) %></tr>
+  <% correct?(g,a) == "Correct" ? correct += 1 : incorrect += 1 %>
+  <% end %>
+</table>
+<h2 id='score'>Final Score: <%= "#{(correct.to_f / (incorrect + correct) * 100).round(2)} %" %></h2>

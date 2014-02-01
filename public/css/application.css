@@ -1,22 +1,182 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
-}
-th {
-  text-align: left;
-}
-.footer {
-	margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  text-align: center;
-}
-.footer a{
+a {
+  color: green;
   text-decoration: none;
 }
 
-.signup form {
-  
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+li a {
+  margin-bottom: 10px;
+}
+
+td {
+  width: 150px;
+}
+
+.container {
+  margin: 20px auto;
+  margin-top: 100px;
+  width: 35em;
+  padding: 0px 20px 60px 20px;
+  border: 1px dotted black;
+  text-align: center;
+  color: #493D26;
+  border-radius: 15px
+}
+
+.login {
+  width: 17em;
+  margin: 0 auto;
+  color: #493D26;
+}
+
+#submit {
+background-color:#ed8223;
+  color:#fff;
+  font-family:'Helvetica Neue',sans-serif;
+  font-size:18px;
+  line-height:23px;
+  border-radius:20px;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  border:0;
+  text-shadow:#C17C3A 0 -1px 0;
+  width:23em;
+  height:28px;
+  margin-top: .5em;
+  float: right;
+}
+
+#title {
+  font-size:4em;
+  margin: 20px 0px 10px 0px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.create {
+  float: left;
+  margin-top: 1em;
+}
+
+#quotes {
+  text-align: right;
+  margin-bottom: 10;
+}
+
+#soldier {
+  margin-top:10px;
+  float: left;
+  border-radius: 15px;
+}
+
+#user_title {
+  width:400px;
+  margin: 25px 0px 10px 0px;
+  float: left;
+  font-size:52px;
+}
+
+#bat {
+  margin-top:15px;
+  border-radius:15px;
+  float: right;
+}
+
+#create_form {
+  margin-top:30px;
+}
+
+#under_bat {
+  text-align: center;
+  width:400px;
+}
+
+#user_submit {
+  background-color:#ed8223;
+  color:#fff;
+  font-family:'Helvetica Neue',sans-serif;
+  font-size:18px;
+  line-height:23px;
+  border-radius:20px;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  border:0;
+  text-shadow:#C17C3A 0 -1px 0;
+  width:31em;
+  height:28px;
+  margin-top: .5em;
+  float: center;
+}
+
+.name_error {
+  margin-bottom: 0px;
+}
+
+.try_another {
+  margin-top: 0px;
+}
+
+.top-nav {
+    position: fixed;
+    width: 100%;
+    height: 64px;
+    text-align: center;
+    background-color: #ed8223;
+    top: 0;
+    color: white;
+}
+.nav {
+  float: right;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.nav a {
+  color: white;
+}
+
+.nav li {
+  display: inline;
+  padding-left: 30px;
+  padding-right: 5px;
+}
+
+#nav_title {
+  padding-left:5px;
+  margin-top: 13px;
+  float: left;
+}
+
+#fun_n_games {
+  margin-bottom: 0px;
+}
+
+#previous {
+  margin-top: 0px;
+}
+
+.button {
+  background-color:#ed8223;
+  color:#fff;
+  font-family:'Helvetica Neue',sans-serif;
+  font-size:18px;
+  line-height:23px;
+  border-radius:20px;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  border:0;
+  text-shadow:#C17C3A 0 -1px 0;
+  width:200px;
+  height:28px;
+  float: left;
+  height: 200px;
+  margin: 0px 0px 20px 50px;
+}
+
+#score {
+  text-align: right;
 }
