@@ -22,7 +22,7 @@ get '/card/:card_id' do
   elsif session[:new_guess].downcase == session[:answer].downcase
     @guess = "Correct!"
   else
-    @guess = "Incorrect!"
+    @guess = "Incorrect! The correct answer is #{session[:answer]}"
   end
 
   erb :card
