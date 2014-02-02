@@ -11,3 +11,4 @@
   <% end %>
 </table>
 <h2 id='score'>Final Score: <%= "#{(correct.to_f / (incorrect + correct) * 100).round(2)} %" %></h2>
+<a id='delete' href="/delete/<%= @id %>">Delete Round</a>

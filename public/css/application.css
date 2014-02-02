@@ -180,3 +180,8 @@ background-color:#ed8223;
 #score {
   text-align: right;
 }
+
+#delete {
+  float:right;
+  font-size: 15px;
+}
