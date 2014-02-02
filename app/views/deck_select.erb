@@ -1,6 +1,7 @@
 <h1>Please Pick a Deck</h1>
 <form action='/start' method='post'>
   <% Deck.all.each do |deck| %>
-    <input class='button' type='submit' name="name" value="<%= "#{deck.name}" %>">
-    <% end %>
+    <input class='button' type='submit' name="name" value="<%= "#{deck.name.split("_").map(&:capitalize).join(" ")}" %>">
+    <input type='hidden' name='name' value='<%= "#{deck.name}" %>'>
+  <% end %>
 </form>
