@@ -1,12 +1,8 @@
 require 'pry'
 
-get "/new" do
-  erb :new
-end
-
 post '/start' do
   deck = Deck.find_by_name(params[:name])
-  round = Round.create(:user_id => session[:id], :deck_id => deck.id, :name => "#{params[:name]} #{Time.now} ")
+  round = Round.create(:user_id => session[:id], :deck_id => deck.id,  :name => round_name(params[:name]))
   session[:round_id] = round.id
   session[:cards] = []
   deck.cards.all.each do |card|
@@ -61,7 +57,10 @@ get '/complete' do
   erb :last_card
 end
 
-
+get '/exit' do
+  name = Round.where(id: session[:round_id]).first.name
+  redirect "/result/#{name}"
+end
 
 
 
