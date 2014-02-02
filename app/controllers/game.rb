@@ -19,7 +19,7 @@ get '/card/:card_id' do
 
   if session[:new_guess]  == nil
     @guess = nil
-  elsif session[:new_guess] == session[:answer]
+  elsif session[:new_guess].downcase == session[:answer].downcase
     @guess = "Correct!"
   else
     @guess = "Incorrect!"
