@@ -185,3 +185,36 @@ background-color:#ed8223;
   float:right;
   font-size: 15px;
 }
+
+#card_submit {
+  background-color:#ed8223;
+  color:#fff;
+  font-family:'Helvetica Neue',sans-serif;
+  font-size:18px;
+  line-height:23px;
+  border-radius:20px;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  border:0;
+  text-shadow:#C17C3A 0 -1px 0;
+  width:5em;
+  height:28px;
+  margin: 10px 0px 30px 0px;
+}
+
+#card {
+  margin-left:95px;
+  margin-bottom: 50px;
+}
+
+#guess_text {
+  text-align: center;
+}
+
+#card_title {
+  margin: 60px 0px 60px 0px;
+}
+
+.card_box {
+  margin: 0;
+}

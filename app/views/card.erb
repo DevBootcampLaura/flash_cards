@@ -1,10 +1,19 @@
-<h2><%="#{@card.question}"%></h2>
-<form action="/card" method="post">
-  <input type="text" name="guess">
-  <input type="hidden" name="id" value="<%= @card.id %>">
 <p><%= @guess %></p>
-  <input type="submit" value="Make A Guess!">
+
+<h1 id='card_title'><%="#{@card.question}"%></h1>
+<h3 class='card_box'>Hit Me With Your Best Shot</h3>
+<div id='card'>
+<h3 class='card_box'>
+<form action="/card" method="post">
+  <input type="text" name="guess" id='guess_text'>
+  <input type="hidden" name="id" value="<%= @card.id %>">
+  <input id='card_submit' type="submit" value="Submit">
 </form>
-<form action="/exit" method= "get">
+</h3>
+</div>
+<!-- <form action="/exit" method= "get">
   <input type="submit" value="End Game">
 </form>
+ -->
+
+ <a href='/exit'>End Game</a>
