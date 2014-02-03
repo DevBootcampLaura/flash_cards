@@ -1,9 +1,14 @@
 flash_cards
 ===========
-Added some text on line 3
 DBC Challenge #292
 https://socrates.devbootcamp.com/challenges/292
 
 Web Flash Cards 1: Multiple Deck
 
-group flash cards project w/ jacky sum, laura crowe, danny lu, and juan ortiz
+Group flash cards project by Jacky Sum, Laura Crowe, Danny Lu, and Juan Ortiz
+
+Contact us via email:
+Jacky:
+Laura: lleecrowe@gmail.com
+Danny: dandydanny@gmail.com
+Juan: juandefelix@yahoo.es
