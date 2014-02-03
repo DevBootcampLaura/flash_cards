@@ -7,7 +7,7 @@ Web Flash Cards 1: Multiple Deck
 
 Group flash cards project by Jacky Sum, Laura Crowe, Danny Lu, and Juan Ortiz
 
-Contact us via email:
+Contact us via email:\n
 Jacky:
 Laura: lleecrowe@gmail.com
 Danny: dandydanny@gmail.com
