@@ -11,7 +11,7 @@ Date: February 2, 2014
 ###Contact us via email:<br>
 Jacky: jsum528@icloud.com<br>
 Laura: lleecrowe@gmail.com<br>
-Danny: dandydanny@gmail.com<br>
+Danny: https://github.com/dandydanny<br>
 Juan: juandefelix@yahoo.es<br>
 
 ###Brief Overview:<br>
