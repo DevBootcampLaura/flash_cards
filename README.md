@@ -33,6 +33,7 @@ This is a simple application that allows you to test your knowledge with differe
 5. Type your guess and click "submit" to find out if you are correct and move on to the next card
 6. Click end game to exit and end the game and view your stats
 7. Finish the game and see how you did!
+8. Log out when you are finished
 
 
 
