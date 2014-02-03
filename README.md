@@ -26,7 +26,13 @@ This is a simple application that allows you to test your knowledge with differe
 6. Play the game!<br>
 
 ###How to Play
-
+1. Click "create an account" and enter a username and password that is 6 to 14 letters long and contains a number
+2. Log in with that username and password
+3. Click on "new deck, new game" to select a deck to play (or click one of your previous games to view your stats if you have played before)
+4. Select a deck
+5. Type your guess and click "submit" to find out if you are correct and move on to the next card
+6. Click end game to exit and end the game and view your stats
+7. Finish the game and see how you did!
 
 
 
